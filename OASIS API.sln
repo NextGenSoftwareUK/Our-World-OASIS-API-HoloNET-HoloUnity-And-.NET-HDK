@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OASIS API", "OASIS API\OASIS API.csproj", "{A8131B22-06EC-424A-B689-9411C8176BE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NextGenSoftware.OASIS.API.WebAPI", "OASIS API\NextGenSoftware.OASIS.API.WebAPI.csproj", "{A8131B22-06EC-424A-B689-9411C8176BE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenSoftware.OASIS.API.FrontEnd", "OASIS API FrontEnd\NextGenSoftware.OASIS.API.FrontEnd.csproj", "{C50D7EA1-3B3C-4529-9317-55A5083DB560}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenSoftware.OASIS.API.Core", "OASIS API Core\NextGenSoftware.OASIS.API.Core.csproj", "{9AA01072-4D3A-4EA2-80C6-CCEC2AB41BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenSoftware.OASIS.API.HoloOASIS", "HOLOOASIS\NextGenSoftware.OASIS.API.HoloOASIS.csproj", "{8DE29EE9-2D47-4872-9DDD-6DF07B414FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextGenSoftware.HoloNET", "HOLONET\NextGenSoftware.HoloNET.csproj", "{BFAE2E3F-3C20-46EB-ABD1-A945390705F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{A8131B22-06EC-424A-B689-9411C8176BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8131B22-06EC-424A-B689-9411C8176BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8131B22-06EC-424A-B689-9411C8176BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C50D7EA1-3B3C-4529-9317-55A5083DB560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C50D7EA1-3B3C-4529-9317-55A5083DB560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C50D7EA1-3B3C-4529-9317-55A5083DB560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C50D7EA1-3B3C-4529-9317-55A5083DB560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA01072-4D3A-4EA2-80C6-CCEC2AB41BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA01072-4D3A-4EA2-80C6-CCEC2AB41BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA01072-4D3A-4EA2-80C6-CCEC2AB41BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA01072-4D3A-4EA2-80C6-CCEC2AB41BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE29EE9-2D47-4872-9DDD-6DF07B414FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE29EE9-2D47-4872-9DDD-6DF07B414FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE29EE9-2D47-4872-9DDD-6DF07B414FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE29EE9-2D47-4872-9DDD-6DF07B414FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFAE2E3F-3C20-46EB-ABD1-A945390705F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFAE2E3F-3C20-46EB-ABD1-A945390705F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFAE2E3F-3C20-46EB-ABD1-A945390705F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFAE2E3F-3C20-46EB-ABD1-A945390705F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

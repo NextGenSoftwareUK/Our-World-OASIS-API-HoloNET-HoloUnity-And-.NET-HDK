@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace NextGenSoftware.OASIS.API.WebAPI
+namespace OASIS_API_FrontEnd
 {
     public class Program
     {

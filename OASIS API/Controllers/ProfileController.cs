@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace OASIS_API.Controllers
+namespace NextGenSoftware.OASIS.API.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ProfileController : ControllerBase
     {
         // GET api/values
         [HttpGet]

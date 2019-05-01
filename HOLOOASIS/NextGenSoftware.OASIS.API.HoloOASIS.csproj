@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HOLONET\NextGenSoftware.HoloNET.csproj" />
+    <ProjectReference Include="..\OASIS API Core\NextGenSoftware.OASIS.API.Core.csproj" />
+  </ItemGroup>
+
+</Project>

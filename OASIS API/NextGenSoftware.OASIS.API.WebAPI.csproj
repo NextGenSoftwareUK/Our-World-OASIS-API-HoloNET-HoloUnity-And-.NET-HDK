@@ -3,7 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>OASIS_API</RootNamespace>
+    <RootNamespace>NextGenSoftware.OASIS.API.WebAPI</RootNamespace>
+    <AssemblyName>NextGenSoftware.OASIS.API.WebAPI</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

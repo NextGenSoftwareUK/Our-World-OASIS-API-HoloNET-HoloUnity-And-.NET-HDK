@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HOLONET\NextGenSoftware.HoloNET.csproj" />
     <ProjectReference Include="..\OASIS API Core\NextGenSoftware.OASIS.API.Core.csproj" />
   </ItemGroup>
 

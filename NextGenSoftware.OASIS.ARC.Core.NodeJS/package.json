@@ -1,0 +1,12 @@
+{
+  "name": "next-gen-software.oasis.arc.core.node-js",
+  "version": "0.0.0",
+  "description": "NextGenSoftware.OASIS.ARC.Core.NodeJS",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.14"
+  }
+}

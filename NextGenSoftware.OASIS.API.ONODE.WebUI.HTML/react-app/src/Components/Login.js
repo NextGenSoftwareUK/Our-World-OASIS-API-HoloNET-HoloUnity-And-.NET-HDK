@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { login } from '../actions/auth';
 import '../CSS/Login.css';
 const axios = require('axios');
 
-export default class Login extends React.Component {
+class Login extends React.Component {
 
     constructor(props) {
         super(props);
@@ -11,52 +13,10 @@ export default class Login extends React.Component {
             email: '',
             password: ''
         }
+        console.log(this.props)
     }
 
-    // onLogin(event) {
-    
-    // event.preventDefault();
-    // console.log(`${this.state.email}`);
-    // let email = document.getElementById('login-email').value;
-    // let password = document.getElementById('login-password').value;
-    // let userObject = {
-    //   email,
-    //   password
-    // }
-    // const userAction = async () => {
-    //   console.log('doing api call');
-      
-    //   const response = await fetch('https://api.oasisplatform.world/api/avatar/authenticate', {
-    //     method: 'POST',
-    //     body: JSON.stringify(userObject), // string or object
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     }
-    //   });
-    //   if (response.status === 200) {
-    //     const myJson = await response.json(); //extract JSON from the http response
-    //     alert(myJson.message);
-
-    //     // hide the login/signup buttons
-    //     var elementList = document.getElementsByClassName("nav-logins");
-    //     var avatarDropdowm = document.getElementByClassName("nav-avatar-dropdowm");
-
-    //     for (var i = 0; i < elementList.length; i++) {
-    //       elementList[i].classList.add('hide-logins')
-    //     }
-    //     avatarDropdowm.classList.add('enabled')
-    //     //===============================//
-
-    //     window.location.reload();
-    //   } else {
-    //     const myJson = await response.json(); //extract JSON from the http response
-    //     alert(myJson.title);
-    //     window.location.reload();
-    //   }
-
-    // }
-    // userAction();
-    // }
+    dispatch = this.props.dispatch
     
     handleLogin = (e) => {
         e.preventDefault();
@@ -66,16 +26,8 @@ export default class Login extends React.Component {
             password: this.state.password
         }
 
-        const headers = { 
-            'Content-Type': 'application/json'
-        };
-
-        axios.post('https://api.oasisplatform.world/api/avatar/authenticate', data, {headers})
-        .then(response => {
-            console.log(response);
-        }).catch(error => {
-            console.error('There was an error!', error);
-        });
+        this.dispatch(login(data))
+        
     }
 
     handleEmailChange = (event) => {
@@ -116,3 +68,5 @@ export default class Login extends React.Component {
         )
     }
 }
+
+export default connect()(Login)

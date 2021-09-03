@@ -1,12 +1,16 @@
-import '../CSS/App.css'
-import Navbar from './Navbar'
+import { Provider } from "react-redux";
+import "../CSS/App.css";
+import store from "../store";
+import Navbar from "./Navbar";
 
 function App() {
   return (
-    <header className="App-header">
-      <Navbar />
-    </header>
-  )
+    <Provider store={store}>
+      <header className="App-header">
+        <Navbar />
+      </header>
+    </Provider>
+  );
 }
 
-export default App
+export default App;

@@ -6,7 +6,7 @@ import loginIcon from "../img/loggedin.png";
 import SideNav from "./SideNav";
 import Login from "./Login";
 import Signup from "./Signup";
-import "../css/Navbar.css";
+import "../CSS/Navbar.css";
 
 import axios from "axios";
 

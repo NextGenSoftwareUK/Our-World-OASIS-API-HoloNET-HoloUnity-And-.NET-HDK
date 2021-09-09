@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SideMenu from './SideMenu';
-import '../css/SideNav.css';
+import '../CSS/SideNav.css';
 
 const data = [
     {

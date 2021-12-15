@@ -8,6 +8,7 @@ using NextGenSoftware.OASIS.API.Core.Interfaces;
 using NextGenSoftware.OASIS.API.Core.Enums;
 using NextGenSoftware.OASIS.API.Core.Holons;
 using NextGenSoftware.OASIS.API.Core.Helpers;
+using Neo4j.Driver;
 
 namespace NextGenSoftware.OASIS.API.Providers.Neo4jOASIS
 {
@@ -17,6 +18,7 @@ namespace NextGenSoftware.OASIS.API.Providers.Neo4jOASIS
         public string Host { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        private readonly IDriver _driver;
 
         public Neo4jOASIS(string host, string username, string password)
         {
@@ -28,14 +30,26 @@ namespace NextGenSoftware.OASIS.API.Providers.Neo4jOASIS
             Host = host;
             Username = username;
             Password = password;
+            _driver = GraphDatabase.Driver(host, AuthTokens.Basic(username, password));
+            
         }
 
         private async Task<bool> Connect()
         {
-            GraphClient = new GraphClient(new Uri(Host), Username, Password);
-            GraphClient.OperationCompleted += _graphClient_OperationCompleted;
-            await GraphClient.ConnectAsync();
-            return true;
+            try
+            {
+                //GraphClient = new GraphClient(new Uri(Host), Username, Password);
+                //GraphClient.OperationCompleted += _graphClient_OperationCompleted;
+                //await GraphClient.ConnectAsync();                
+                
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+                return false;
+            }
+            
         }
 
         private async Task Disconnect()

@@ -430,7 +430,6 @@ namespace NextGenSoftware.OASIS.API.Providers.Neo4jOASIS.Aura
             throw new NotImplementedException();
         }
 
-
         public override IAvatar SaveAvatar(IAvatar avatar)
         {
             if (avatar.Id == Guid.Empty)

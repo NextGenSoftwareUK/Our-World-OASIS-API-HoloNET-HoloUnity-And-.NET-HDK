@@ -124,17 +124,15 @@ class Auth {
       method: "post",
       url: "https://api.oasisplatform.world/api/avatar/forgot-password",
       headers: {
-        Authorization: `Bearer ${this.token.jwtToken}`,
         "Content-Type": "application/json",
-        Cookie: `refreshToken=${this.token.refresh}`,
       },
       data: data,
     };
 
     return axios(config)
       .then((response) => {
-        if (res.data.isError) {
-          return { error: true, data: res.data };
+        if (response.data.isError) {
+          return { error: true, data: response.data };
         }
         return { error: false, data: response.data };
       })

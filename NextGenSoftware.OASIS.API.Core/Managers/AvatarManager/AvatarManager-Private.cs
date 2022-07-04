@@ -18,6 +18,7 @@ namespace NextGenSoftware.OASIS.API.Core.Managers
     public partial class AvatarManager : OASISManager
     {
         private const string LIVE_OASISSITE = "https://oasisplatform.world";
+        private bool appendChildObjects;
 
         private string OASISWebSiteURL
         {
@@ -1132,8 +1133,8 @@ namespace NextGenSoftware.OASIS.API.Core.Managers
             if (avatarDetailOriginal.Name != avatarDetailToUpdate.Name && !string.IsNullOrEmpty(avatarDetailToUpdate.Name))
                 avatarDetailOriginal.Name = avatarDetailToUpdate.Name;
 
-            if (avatarDetailOriginal.Level != avatarDetailToUpdate.Level && !string.IsNullOrEmpty(avatarDetailToUpdate.Level))
-                avatarDetailOriginal.Level = avatarDetailToUpdate.Level;    
+        //    if (avatarDetailOriginal.Level != avatarDetailToUpdate.Level && !string.IsNullOrEmpty(avatarDetailToUpdate.Level))
+        //        avatarDetailOriginal.Level = avatarDetailToUpdate.Level;    
 
             if (avatarDetailOriginal.Omniverse != avatarDetailToUpdate.Omniverse)
                 avatarDetailOriginal.Omniverse = avatarDetailToUpdate.Omniverse;

@@ -1117,6 +1117,125 @@ namespace NextGenSoftware.OASIS.API.Core.Managers
             if (avatarDetailOriginal.DimensionLevel != avatarDetailToUpdate.DimensionLevel)
                 avatarDetailOriginal.DimensionLevel = avatarDetailToUpdate.DimensionLevel;
 
+            if (avatarDetailOriginal.Aura != avatarDetailToUpdate.Aura)
+                avatarDetailOriginal.Aura = avatarDetailToUpdate.Aura;
+
+            if (avatarDetailOriginal.Chakras != avatarDetailToUpdate.Chakras)
+                avatarDetailOriginal.Chakras = avatarDetailToUpdate.Chakras;
+
+            if (avatarDetailOriginal.HumanDesign != avatarDetailToUpdate.HumanDesign)
+                avatarDetailOriginal.HumanDesign = avatarDetailToUpdate.HumanDesign;
+
+            if (avatarDetailOriginal.Id != avatarDetailToUpdate.Id)
+                avatarDetailOriginal.Id = avatarDetailToUpdate.Id;
+
+            if (avatarDetailOriginal.Name != avatarDetailToUpdate.Name && !string.IsNullOrEmpty(avatarDetailToUpdate.Name))
+                avatarDetailOriginal.Name = avatarDetailToUpdate.Name;
+
+            if (avatarDetailOriginal.Level != avatarDetailToUpdate.Level && !string.IsNullOrEmpty(avatarDetailToUpdate.Level))
+                avatarDetailOriginal.Level = avatarDetailToUpdate.Level;    
+
+            if (avatarDetailOriginal.Omniverse != avatarDetailToUpdate.Omniverse)
+                avatarDetailOriginal.Omniverse = avatarDetailToUpdate.Omniverse;
+
+            if (avatarDetailOriginal.Portrait != avatarDetailToUpdate.Portrait && !string.IsNullOrEmpty(avatarDetailToUpdate.Portrait))
+                avatarDetailOriginal.Portrait = avatarDetailToUpdate.Portrait;
+
+            if (avatarDetailOriginal.Skills != avatarDetailToUpdate.Skills)
+                avatarDetailOriginal.Skills = avatarDetailToUpdate.Skills;
+
+            if (avatarDetailOriginal.Stats != avatarDetailToUpdate.Stats)
+                avatarDetailOriginal.Stats = avatarDetailToUpdate.Stats;
+
+            if (avatarDetailOriginal.SuperPowers != avatarDetailToUpdate.SuperPowers)
+                avatarDetailOriginal.SuperPowers = avatarDetailToUpdate.SuperPowers;    
+
+
+            if (avatarDetailToUpdate.Spells.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.Spells.Clear();
+
+                avatarDetailOriginal.Spells.AddRange(avatarDetailToUpdate.Spells);
+            }
+
+            if (avatarDetailToUpdate.KarmaAkashicRecords.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.KarmaAkashicRecords.Clear();
+
+                avatarDetailOriginal.KarmaAkashicRecords.AddRange(avatarDetailToUpdate.KarmaAkashicRecords);
+            }
+
+            if (avatarDetailToUpdate.Inventory.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.Inventory.Clear();
+
+                avatarDetailOriginal.Inventory.AddRange(avatarDetailToUpdate.Inventory);
+            }
+
+            if (avatarDetailToUpdate.HeartRateData.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.HeartRateData.Clear();
+
+                avatarDetailOriginal.HeartRateData.AddRange(avatarDetailToUpdate.HeartRateData);
+            }
+
+            if (avatarDetailToUpdate.Gifts.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.Gifts.Clear();
+
+                avatarDetailOriginal.Gifts.AddRange(avatarDetailToUpdate.Gifts);
+            }
+
+            if (avatarDetailToUpdate.GeneKeys.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.GeneKeys.Clear();
+
+                avatarDetailOriginal.GeneKeys.AddRange(avatarDetailToUpdate.GeneKeys);
+            }
+
+
+
+            if (avatarDetailToUpdate.Achievements.Count > 0)
+            {
+                if (!appendChildObjects)
+                    avatarDetailOriginal.Achievements.Clear();
+
+                avatarDetailOriginal.Achievements.AddRange(avatarDetailToUpdate.Achievements);
+            }
+
+            if (avatarDetailOriginal.Attributes.Magic != avatarDetailToUpdate.Attributes.Magic && avatarDetailToUpdate.Attributes.Magic > 0)
+                avatarDetailOriginal.Attributes.Magic = avatarDetailToUpdate.Attributes.Magic;
+
+            if (avatarDetailOriginal.Attributes.Wisdom != avatarDetailToUpdate.Attributes.Wisdom && avatarDetailToUpdate.Attributes.Wisdom > 0)
+                avatarDetailOriginal.Attributes.Wisdom = avatarDetailToUpdate.Attributes.Wisdom;
+
+            if (avatarDetailOriginal.Attributes.Intelligence != avatarDetailToUpdate.Attributes.Intelligence && avatarDetailToUpdate.Attributes.Intelligence > 0)
+                avatarDetailOriginal.Attributes.Intelligence = avatarDetailToUpdate.Attributes.Intelligence;
+
+            if (avatarDetailOriginal.Attributes.Strength != avatarDetailToUpdate.Attributes.Strength && avatarDetailToUpdate.Attributes.Strength > 0)
+                avatarDetailOriginal.Attributes.Strength = avatarDetailToUpdate.Attributes.Strength;
+
+            if (avatarDetailOriginal.Attributes.Speed != avatarDetailToUpdate.Attributes.Speed && avatarDetailToUpdate.Attributes.Speed > 0)
+                avatarDetailOriginal.Attributes.Speed = avatarDetailToUpdate.Attributes.Speed;
+
+            if (avatarDetailOriginal.Attributes.Vitality != avatarDetailToUpdate.Attributes.Vitality && avatarDetailToUpdate.Attributes.Vitality > 0)
+                avatarDetailOriginal.Attributes.Vitality = avatarDetailToUpdate.Attributes.Vitality;
+
+            if (avatarDetailOriginal.Attributes.Dexterity != avatarDetailToUpdate.Attributes.Dexterity && avatarDetailToUpdate.Attributes.Dexterity > 0)
+                avatarDetailOriginal.Attributes.Dexterity = avatarDetailToUpdate.Attributes.Dexterity;
+
+            if (avatarDetailOriginal.Attributes.Endurance != avatarDetailToUpdate.Attributes.Endurance && avatarDetailToUpdate.Attributes.Endurance > 0)
+                avatarDetailOriginal.Attributes.Endurance = avatarDetailToUpdate.Attributes.Endurance;
+
+            if (avatarDetailOriginal.Attributes.Toughness != avatarDetailToUpdate.Attributes.Toughness && avatarDetailToUpdate.Attributes.Toughness > 0)
+                avatarDetailOriginal.Attributes.Toughness = avatarDetailToUpdate.Attributes.Toughness;
+
             //TODO: Apply to all other properties. Use AutoMapper here instead! ;-)
 
             result = await SaveAvatarDetailAsync(avatarDetailOriginal);
